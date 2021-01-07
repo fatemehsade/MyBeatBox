@@ -107,6 +107,13 @@ public class BeatBoxFragment extends Fragment {
         public SoundHolder(@NonNull View itemView) {
             super(itemView);
             beatBoxButton=itemView.findViewById(R.id.button_beat_box);
+
+            beatBoxButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mRepository.play(mSound);
+                }
+            });
         }
         public void bind(Sound sound){
             mSound=sound;

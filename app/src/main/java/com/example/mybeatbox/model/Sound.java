@@ -3,6 +3,7 @@ package com.example.mybeatbox.model;
 public class Sound {
     private String mName;
     private String mAssetPath;
+    private Integer mSoundId;
 
 
     public Sound() {
@@ -14,6 +15,15 @@ public class Sound {
         String fileNameWithExtension=sections[sections.length-1];
         int lastIndex=fileNameWithExtension.lastIndexOf(".");
         mName=fileNameWithExtension.substring(0,lastIndex);
+    }
+
+
+    public Integer getSoundId() {
+        return mSoundId;
+    }
+
+    public void setSoundId(Integer soundId) {
+        mSoundId = soundId;
     }
 
     public String getName() {
